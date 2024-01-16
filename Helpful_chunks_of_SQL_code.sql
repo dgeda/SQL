@@ -56,7 +56,7 @@ WHERE
   TRIM(state) = 'OH'
 
 
----------------------------------------------Editing---------------------------------------------
+---------------------------------------------Update--------------------------------------------
 
 SELECT  
   DISTINCT fuel_type
@@ -115,7 +115,7 @@ WHERE
 SELECT
   stn,
   date,
--- Use the IF function to replace 9999.9 values, which the dataset description explains is the default value when temperature is missing, with NULLs instead.
+-- Use the IF function to replace 9999.9 values, which the dataset description explains is the default value when the temperature is missing, with NULLs instead.
   IF(
      temp=9999.9,
      NULL,
@@ -165,7 +165,7 @@ GROUP BY
 --------------------------------------------- Calculations ----------------------------------------------
 
 
---the total number of bags of avocados sold on each dat at each location
+--the total number of bags of avocados sold on each day at each location
 SELECT  
   Date, 
   region, 
@@ -270,7 +270,7 @@ FROM
     number_of_rides DESC
 
 --Use a WHERE statement 
--- to differentiatite bn subscribers and one-time customers find a list of stations subscribers used
+-- To differentiate bn subscribers and one-time customers find a list of stations subscribers used
 SELECT
   id,
   name
